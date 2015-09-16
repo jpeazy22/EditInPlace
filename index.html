@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel ="stylesheet" type="text/css" href="main.css">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js"></script>
+		<!-- <link rel="stylesheet" href="normalize.css"> -->
+		<title>JS5: Edit in Place</title>
+	</head>
+	<body>
+	<div ng-controller="mainController">
+		<section class="bio">
+			<img src="http://placehold.it/200x200">
+			<h1>{{dummy}}</h1>
+			<h1>User Name</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu dui ac massa posuere blandit. Cras aliquet purus quis nibh semper blandit. Ut odio eros, lobortis id euismod vitae, ultrices vitae ipsum. Quisque fringilla massa sed semper viverra. Mauris pellentesque, leo eget egestas hendrerit, urna erat pellentesque risus, nec eleifend ex eros ac urna. Curabitur pulvinar nisi ac risus laoreet imperdiet. </p>
+
+			<p>Nulla viverra sem eget odio elementum imperdiet. Aliquam vitae vehicula diam, in laoreet magna. Nullam at vestibulum mi, ut semper nisi. Sed ut dapibus tellus. Curabitur nec urna porttitor, interdum ante non, pharetra tellus. </p>
+		</section>
+		<hr>
+		<section class="details">
+			<div ng-show='hideText' ng-click="showInput(1)">{{text1}}</div> 
+			<input ng-hide='hideText' ng-blur="showInput(1)" ng-model="text1"></input>
+
+			<div ng-show='hideText2' ng-click="showInput(2)">{{text2}}</div>
+			<input ng-hide='hideText2' ng-blur="showInput(2)"ng-model="text2"></input>
+			<!-- <h3>Education:</h3><input ng-model onclick="return handleClick(event);"></input>
+			<h3>Work Experience:</h3><input ng-model></input> -->
+
+		</section>
+	</div>
+
+	<script src="main.js"></script>
+	</body>
+</html>
